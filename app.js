@@ -2,6 +2,7 @@
 //variables
 let usuario = []
 let UsuarioNombre;
+let usuarioListaNombre;
 
 /**
  * funcion que valida que el nombre del usuario no este vacio antes de agregarlo a la lista 
@@ -18,3 +19,20 @@ function usuarioAgregar(){
     }
 }
 
+/**
+ * funcion para actualizar la lista de amigos en el DOM, crea elementos "li" por cada usuarios
+ * 
+ */
+
+function usuarioLista(){
+    usuarioListaNombre = document.querySelector("#listaAmigos");
+    listaAmigos.innerHTML = "";
+
+    for(let index = 0; index<amigos.length; index++){
+        const element = amigos[index];
+
+        let listaHTML = document.createElement("li");
+        listaHTML.textContent = element;
+        listaAmigos.appendChild(listaHTML);
+    }
+}
