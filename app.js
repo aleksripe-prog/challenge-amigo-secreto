@@ -1,15 +1,15 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 //variables
 let usuario = []
-//let UsuarioNombre;
-//let usuarioListaNombre;
-//let cantidadNombres;
+let UsuarioNombre;
+let usuarioListaNombre;
+let cantidadNombres;
 /**
  * funcion que valida que el nombre del usuario no este vacio antes de agregarlo a la lista 
  * 
  */
 function usuarioAgregar(){
-    let UsuarioNombre = document.getElementById("amigo").value;
+    UsuarioNombre = document.getElementById("amigo").value;
 
     if (UsuarioNombre.trim() ==="") {
         alert("el campo esta vacio agrega un nombre");
@@ -25,7 +25,7 @@ function usuarioAgregar(){
  * 
  */
 function usuarioListaMostrar(){
-    let usuarioListaNombre = document.querySelector("#listaAmigos");
+    usuarioListaNombre = document.querySelector("#listaAmigos");
     usuarioListaNombre.innerHTML = "";
 
     for(let index = 0; index<usuario.length; index++){
@@ -42,13 +42,13 @@ function usuarioListaMostrar(){
  * 
  */
 function sortearUsuario() {
- let cantidadNombres = amigos.length;
+ cantidadNombres = usuario.length;
 
   if (cantidadNombres === 0) {
     alert("Por favor, inserte un nombre antes de sortear");
   } else {
     let indiceAmigo = Math.floor(Math.random() * cantidadNombres);
     let resultadoHTML = document.querySelector("#resultado");
-    resultadoHTML.innerHTML = amigos[indiceAmigo];
+    resultadoHTML.innerHTML = usuario[indiceAmigo];
   }
 }
